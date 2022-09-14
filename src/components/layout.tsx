@@ -19,7 +19,7 @@ export default function Layout({ children }: Children) {
           <title>Will Shivers</title>
         </Head>
 
-        <main className="bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-50">
+        <main className="bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-50 h-screen w-screen flex flex-col">
           {children}
         </main>
       </div>

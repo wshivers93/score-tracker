@@ -8,22 +8,28 @@ import ScoreCard from '../components/ScoreCard';
 
 const Home: NextPage = () => {
   const [theme, setTheme] = useRecoilState(themeState);
+  const arrayOfEvents = new Array<number>(10).fill(0);
+
   return (
-    <main>
-      <div className="w-1/4">
-        <ScoreCard></ScoreCard>
-      </div>
-      <div>
-        <button
-            className="absolute top-2 right-2"
-            onClick={() =>
-              theme === "dark" ? setTheme("light") : setTheme("dark")
-            }
-          >
-            {theme}
-          </button>
-      </div>
-    </main>
+    <>
+      <section className='container flex flex-row flex-wrap'>
+        {arrayOfEvents.map(() =>
+          <div className='w-1/4'>
+            <ScoreCard></ScoreCard>
+          </div>
+        )}
+        <div>
+          <button
+              className="absolute top-2 right-2"
+              onClick={() =>
+                theme === "dark" ? setTheme("light") : setTheme("dark")
+              }
+            >
+              {theme}
+            </button>
+        </div>
+      </section>
+    </>
   );
 };
 

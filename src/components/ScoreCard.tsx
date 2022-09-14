@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ScoreCard() {
   return (
-    <div className="flex flex-col border border-white rounded p-3">
+    <div className="flex flex-col border border-slate-800 dark:border-white rounded p-3 m-2">
       <div className="flex flex-row justify-center align-middle">
         Game Clock
       </div>
