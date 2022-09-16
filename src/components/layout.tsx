@@ -3,6 +3,7 @@ import React from "react";
 import { ReactElement } from "react";
 import { useRecoilValue } from "recoil";
 import { themeState } from "../app/atom";
+import Navbar from "./Navbar";
 
 // TODO: fix children type error
 interface Children {
@@ -19,7 +20,8 @@ export default function Layout({ children }: Children) {
           <title>Will Shivers</title>
         </Head>
 
-        <main className="bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-50 h-screen w-screen flex flex-col">
+        <Navbar />
+        <main className="light-mode-style dark:dark-mode-style w-screen flex flex-col">
           {children}
         </main>
       </div>
