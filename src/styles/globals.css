@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .light-mode-style {
+    @apply bg-slate-200 text-slate-800;
+  }
+
+  .dark-mode-style {
+    @apply bg-slate-800 text-slate-50;
+  }
+}
+
 html,
 body {
   padding: 0 !important;
